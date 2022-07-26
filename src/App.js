@@ -21,6 +21,7 @@ const App = () => {
 		} else if (num === '%') {
 			inputStateSetter(inputState / 100);
 		} else if (num === '.') {
+			//not optimal solution! Changes the type of state from Number to String
 			inputStateSetter(String(inputState).concat('.'));
 		} else if (inputState === 0) {
 			inputStateSetter(Number(num));
@@ -61,144 +62,144 @@ const App = () => {
 	};
 
 	return (
-		<div className='flex flex-col h-screen'>
+		<div className='flex flex-col h-screen bg-eerie-black'>
 			<input
 				type='text'
 				inputMode='numeric'
 				value={inputState}
 				onChange={handleChangeInput}
-				className='bg-black text-white select-all outline-none h-1/4 text-right text-6xl appearance-none'
+				className='bg-eerie-black text-white select-all outline-none h-1/4 text-right text-6xl appearance-none'
 			/>
 			<div className='h-3/4 grid grid-rows-5 grid-cols-4 place-items-center'>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-light-gray rounded-full h-1/2 w-1/2 text-eerie-black active:bg-white select-none text-xl font-semibold'
 					onClick={() => handleClick('AC')}
 				>
 					AC
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-slate-300 select-none'
+					className='bg-light-gray rounded-full h-1/2 w-1/2 text-eerie-black active:bg-white select-none text-xl font-semibold'
 					onClick={() => handleClick('+/-')}
 				>
 					+/-
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-slate-300 select-none'
+					className='bg-light-gray rounded-full h-1/2 w-1/2 text-eerie-black active:bg-white select-none text-xl font-semibold'
 					onClick={() => handleClick('%')}
 				>
 					%
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white focus:bg-slate-300 select-none'
+					className='bg-vivid-gamboge rounded-full h-1/2 w-1/2 text-white focus:bg-white focus:text-orange-500 select-none text-xl font-semibold'
 					onClick={() => handleClickforOperation('div')}
 				>
 					÷
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-slate-300 select-none'
+					className='bg-dark-liver rounded-full h-1/2 w-1/2 text-white active:bg-dark-liver-tint select-none text-xl font-semibold'
 					onClick={() => handleClick('7')}
 				>
 					7
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-dark-liver rounded-full h-1/2 w-1/2 text-white active:bg-dark-liver-tint select-none text-xl font-semibold'
 					onClick={() => handleClick('8')}
 				>
 					8
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-dark-liver rounded-full h-1/2 w-1/2 text-white active:bg-dark-liver-tint select-none text-xl font-semibold'
 					onClick={() => handleClick('9')}
 				>
 					9
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white focus:bg-gray-300 select-none'
+					className='bg-vivid-gamboge rounded-full h-1/2 w-1/2 text-white focus:bg-white focus:text-orange-500 select-none text-xl font-semibold'
 					onClick={() => handleClickforOperation('mult')}
 				>
 					{/* This is the unicode character for multipilcation not 'x' */}×
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-dark-liver rounded-full h-1/2 w-1/2 text-white active:bg-dark-liver-tint select-none text-xl font-semibold'
 					onClick={() => handleClick('4')}
 				>
 					4
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-dark-liver rounded-full h-1/2 w-1/2 text-white active:bg-dark-liver-tint select-none text-xl font-semibold'
 					onClick={() => handleClick('5')}
 				>
 					5
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-dark-liver rounded-full h-1/2 w-1/2 text-white active:bg-dark-liver-tint select-none text-xl font-semibold'
 					onClick={() => handleClick('6')}
 				>
 					6
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white focus:bg-gray-300 select-none'
+					className='bg-vivid-gamboge rounded-full h-1/2 w-1/2 text-white focus:bg-white focus:text-orange-500 select-none text-xl font-semibold'
 					onClick={() => handleClickforOperation('sub')}
 				>
 					-
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-dark-liver rounded-full h-1/2 w-1/2 text-white active:bg-dark-liver-tint select-none text-xl font-semibold'
 					onClick={() => handleClick('1')}
 				>
 					1
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-dark-liver rounded-full h-1/2 w-1/2 text-white active:bg-dark-liver-tint select-none text-xl font-semibold'
 					onClick={() => handleClick('2')}
 				>
 					2
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-dark-liver rounded-full h-1/2 w-1/2 text-white active:bg-dark-liver-tint select-none text-xl font-semibold'
 					onClick={() => handleClick('3')}
 				>
 					3
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white focus:bg-gray-300 select-none'
+					className='bg-vivid-gamboge rounded-full h-1/2 w-1/2 text-white focus:bg-white focus:text-orange-500 select-none text-xl font-semibold'
 					onClick={() => handleClickforOperation('add')}
 				>
 					+
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-3/4 text-white active:bg-gray-300 select-none col-span-2'
+					className='bg-dark-liver rounded-full h-1/2 w-3/4 text-white active:bg-dark-liver-tint select-none text-xl font-semibold col-span-2'
 					onClick={() => handleClick('0')}
 				>
 					0
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-dark-liver rounded-full h-1/2 w-1/2 text-white active:bg-dark-liver-tint select-none text-xl font-semibold'
 					onClick={() => handleClick('.')}
 				>
 					.
 				</button>
 				<button
 					type='button'
-					className='bg-gray-400 rounded-full h-1/2 w-1/2 text-white active:bg-gray-300 select-none'
+					className='bg-vivid-gamboge rounded-full h-1/2 w-1/2 text-white active:bg-orange-300 select-none text-xl font-semibold'
 					onClick={() => handleClickforOperation('equals')}
 				>
 					=
